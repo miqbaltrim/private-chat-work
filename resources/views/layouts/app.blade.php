@@ -55,6 +55,8 @@
     <script>
         const CSRF_TOKEN = document.querySelector('meta[name="csrf-token"]').content;
         const WS_HOST = window.location.hostname;
+        const IS_SECURE = window.location.protocol === 'https:';
+        const WS_PROTOCOL = IS_SECURE ? 'wss://' : 'ws://';
     </script>
     @yield('scripts')
 </body>
